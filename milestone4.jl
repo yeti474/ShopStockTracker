@@ -24,7 +24,7 @@ function give_change(price,given)
                 break
             end
         end
-        tender = [string(change_due[i]," x ", string(bank_notes[i])) for i in 1:length(bank_notes)]
+        tender = [string(change_due[i]," x ", string(bank_notes[i])) for i in eachindex(bank_notes)]
         return println(tender)
     end
 end
